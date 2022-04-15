@@ -26,12 +26,12 @@ const Header = () => {
     isAuthenticated,
     formattedAccount,
     swapTokens,
-  } = useContext(RobinhoodContext)
+  } = useContext(AppleMetaContext)
 
   return (
     <div className={styles.container}>
       <div className={styles.leftHeader}>
-        <Image src={logo} height={100} width={100} className={styles.logo} />
+        <Image src={logo} alt="shekelscoin" height={50} width={50} className={styles.logo} />
       </div>
       <div className={styles.searchWrapper}>
         <div className={styles.searchInputContainer}>
@@ -41,12 +41,29 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
       <div className={styles.rightHeader}>
         <div className={styles.menuItem} onClick={swapTokens}>
           Rewards
-        </div>
-        <div className={styles.menuItem}>Portfolio</div>
-        <div className={styles.menuItem}>Cash</div>
+      </div>
+        <div className={styles.menuItem}></div>
+        <a
+          href="https://thebittimes.com/token-SHE-BSC-0x4Ab912f576D64A4f65422a03dc69452dccD0dE5d.html"
+          target="_blank"
+          rel="noreferrer"
+        >          
+          
+        <div className={styles.menuItem}>Info</div> 
+        </a>    
+       
+         <a
+          href="https://commerce.coinbase.com/checkout/37053968-b97b-4b48-8d4d-8471267a4794"
+          target="_blank"
+          rel="noreferrer"
+        >          
+          
+        <div className={styles.menuItem}>Invest</div> 
+        </a>  
         <div className={styles.menuItem}>Messages</div>
         {isAuthenticated && (
           <>

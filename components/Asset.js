@@ -1,7 +1,6 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 
-
 const styles = {
   wrapper: 'flex justify-between p-5  hover:bg-[#30363B] duration-300',
   container: 'flex flex-col text-white items-center justify-center',

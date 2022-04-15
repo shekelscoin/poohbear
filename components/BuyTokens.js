@@ -40,8 +40,8 @@ const BuyTokens = () => {
           <option className={styles.options} value='LINK'>
             LINK
           </option>
-          <option className={styles.options} value='DAI'>
-            DAI
+          <option className={styles.options} value='SHE'>
+            SHE
           </option>
         </select>
         <select
@@ -58,8 +58,8 @@ const BuyTokens = () => {
           <option className={styles.options} value='LINK'>
             LINK
           </option>
-          <option className={styles.options} value='DAI'>
-            DAI
+          <option className={styles.options} value='SHE'>
+            SHE
           </option>
         </select>
         <input

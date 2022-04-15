@@ -17,7 +17,7 @@ import { AppleMetaContext } from '../context/AppleMetaContext'
 //Styles
 const styles = {
   wrapper: 'w-screen h-screen flex flex-col',
-  mainContainer: 'w-2/3 h-full m-auto flex mt-16',
+  mainContainer: 'w-6/7 h-full m-auto flex mt-36',
   leftMain: 'flex flex-col w-3/4 h-full  p-6 overflow-y-scroll',
   portfolioAmountContainer: 'flex flex-col ',
   portfolioAmount: 'text-white text-4xl',
@@ -50,7 +50,7 @@ export default function Home({ coins }) {
       <div className={styles.mainContainer}>
         <div className={styles.leftMain}>
           <div className={styles.portfolioAmountContainer}>
-            <div className={styles.portfolioAmount}>{balance} ETH</div>
+            <div className={styles.portfolioAmount}>{balance} ShekelsCoin</div>
             <div className={styles.portfolioPercent}>
               +0.0008(+0.57%)
               <span className={styles.pastHour}>Past Hour</span>
@@ -63,7 +63,7 @@ export default function Home({ coins }) {
           </div>
           <div className={styles.buyingPowerContainer}>
             <div className={styles.buyingPowerTitle}>Buying Power</div>
-            <div className={styles.buyingPowerAmount}>{balance} ETH</div>
+            <div className={styles.buyingPowerAmount}>{balance} (SHE)</div>
           </div>
           <div className={styles.notice}>
             <div className={styles.noticeContainer}>
@@ -89,6 +89,7 @@ export default function Home({ coins }) {
             return <Asset key={coin.uuid} coin={coin} price={price} />
           })}
 
+            
           <div className={styles.rightMainItem}>
             <div className={styles.ItemTitle}>Lists</div>
             <AiOutlinePlus className={styles.moreOptions} />

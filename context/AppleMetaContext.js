@@ -1,13 +1,14 @@
 import { createContext, useEffect, useState } from 'react'
 import { useMoralis } from 'react-moralis'
+
 import {
   dogeAbi,
-  daiAbi,
+  sheAbi,
   linkAbi,
   usdcAbi,
   dogeAddress,
   linkAddress,
-  daiAddress,
+  sheAddress,
   usdcAddress,
 } from '../lib/constants'
 
@@ -16,7 +17,7 @@ export const AppleMetaContext = createContext()
 export const AppleMetaProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState('')
   const [formattedAccount, setFormattedAccount] = useState('')
-  const [coinSelect, setCoinSelect] = useState('DOGE')
+  const [coinSelect, setCoinSelect] = useState('SHE')
   const [toCoin, setToCoin] = useState('')
   const [balance, setBalance] = useState('')
 
@@ -59,21 +60,21 @@ export const AppleMetaProvider = ({ children }) => {
   }, [currentAccount])
 
   const getContractAddress = () => {
-    if (coinSelect === 'DAI') return daiAddress
+    if (coinSelect === 'SHE') return sheAddress
     if (coinSelect === 'DOGE') return dogeAddress
     if (coinSelect === 'LINK') return linkAddress
     if (coinSelect === 'USDC') return usdcAddress
   }
 
   const getToAddress = () => {
-    if (toCoin === 'DAI') return daiAddress
+    if (toCoin === 'SHE') return sheAddress
     if (toCoin === 'DOGE') return dogeAddress
     if (toCoin === 'LINK') return linkAddress
     if (toCoin === 'USDC') return usdcAddress
   }
 
   const getToAbi = () => {
-    if (toCoin === 'DAI') return daiAbi
+    if (toCoin === 'SHE') return sheAbi
     if (toCoin === 'DOGE') return dogeAbi
     if (toCoin === 'LINK') return linkAbi
     if (toCoin === 'USDC') return usdcAbi

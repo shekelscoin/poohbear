@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-artifact-1",
   "contractName": "DogeCoin",
-  "sourceName": "contracts/Dogecoin.sol",
+  "sourceName": "contracts/DogeCoin.sol",
   "abi": [
     {
       "inputs": [],
