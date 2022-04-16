@@ -54,14 +54,12 @@ const Header = () => {
         >          
           
         <div className={styles.menuItem}>Info</div> 
-        </a>    
-       
+        </a>       
          <a
           href="https://commerce.coinbase.com/checkout/37053968-b97b-4b48-8d4d-8471267a4794"
           target="_blank"
           rel="noreferrer"
-        >          
-          
+        >         
         <div className={styles.menuItem}>Invest</div> 
         </a>  
         <div className={styles.menuItem}>Messages</div>

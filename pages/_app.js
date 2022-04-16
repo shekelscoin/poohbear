@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <MoralisProvider
       // This should be in a .env file
-      serverUrl='https://twh7pepcvgny.usemoralis.com:2053/server'
-      appId='QUAbgXijHuRTEtS4oQov2IGp8E5hk1ckd4QXD3Ic'
+      serverUrl='https://mb6gbmbaexd3.usemoralis.com:2053/server'
+      appId='8vRC7NOcVoaLDCp24CwBZFan63hGTuHDCJ9Kionz'
     >
       <AppleMetaProvider>
         <Component {...pageProps} />

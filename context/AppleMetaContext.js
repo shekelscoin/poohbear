@@ -28,12 +28,12 @@ export const AppleMetaProvider = ({ children }) => {
 
   useEffect(async () => {
     if (isAuthenticated) {
-      const account = user.get('ethAddress')
+      const account = user.get('bscAddress')
       let formatAccount = account.slice(0, 4) + '...' + account.slice(-4)
       setFormattedAccount(formatAccount)
       setCurrentAccount(account)
       const currentBalance = await Moralis.Web3API.account.getNativeBalance({
-        chain: 'rinkeby',
+        chain: 'testnet',
         address: currentAccount,
       })
       const balanceToEth = Moralis.Units.FromWei(currentBalance.balance)
@@ -83,7 +83,7 @@ export const AppleMetaProvider = ({ children }) => {
   //Mint function for the token with send ether to the contract
   const mint = async () => {
     try {
-      if (coinSelect === 'ETH') {
+      if (coinSelect === 'BNB') {
         if (!isAuthenticated) return
         await Moralis.enableWeb3()
         const contractAddress = getToAddress()
@@ -120,7 +120,7 @@ export const AppleMetaProvider = ({ children }) => {
       if (coinSelect === toCoin) return
 
       const fromOptions = {
-        type: 'erc20',
+        type: 'bep20',
         amount: Moralis.Units.Token(amount, '18'),
         receiver: getContractAddress(),
         contractAddress: getContractAddress(),
@@ -146,13 +146,13 @@ export const AppleMetaProvider = ({ children }) => {
   }
 
   //Send eth function
-  const sendEth = async () => {
+  const sendBsc = async () => {
     if (!isAuthenticated) return
     const contractAddress = getToAddress()
 
     let options = {
       type: 'native',
-      amount: Moralis.Units.ETH('0.01'),
+      amount: Moralis.Units.BNB('0.01'),
       receiver: contractAddress,
     }
     const transaction = await Moralis.transfer(options)

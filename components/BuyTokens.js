@@ -28,6 +28,9 @@ const BuyTokens = () => {
           value={coinSelect}
           onChange={e => setCoinSelect(e.target.value)}
         >
+           <option className={styles.options} >
+            BNB
+          </option>
           <option className={styles.options} value='ETH'>
             ETH
           </option>
@@ -43,12 +46,20 @@ const BuyTokens = () => {
           <option className={styles.options} value='SHE'>
             SHE
           </option>
+          <option className={styles.options} >
+            SOL
+          </option>
+
+
         </select>
         <select
           className={styles.select}
           value={toCoin}
           onChange={e => setToCoin(e.target.value)}
         >
+          <option className={styles.options} >
+            BNB
+          </option>
           <option className={styles.options} value='DOGE'>
             DOGE
           </option>
@@ -60,6 +71,9 @@ const BuyTokens = () => {
           </option>
           <option className={styles.options} value='SHE'>
             SHE
+          </option>
+          <option className={styles.options} >
+            SOL
           </option>
         </select>
         <input

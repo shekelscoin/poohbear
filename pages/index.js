@@ -63,7 +63,7 @@ export default function Home({ coins }) {
           </div>
           <div className={styles.buyingPowerContainer}>
             <div className={styles.buyingPowerTitle}>Buying Power</div>
-            <div className={styles.buyingPowerAmount}>{balance} (SHE)</div>
+            <div className={styles.buyingPowerAmount}>{balance} SHE/BNB</div>
           </div>
           <div className={styles.notice}>
             <div className={styles.noticeContainer}>
